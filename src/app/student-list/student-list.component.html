@@ -1,0 +1,25 @@
+<p class="text-center">
+  student-list works!
+</p>
+<input type="button" value="Loard List" class="btn btn-primary"(click)="getStudentList()" >
+<table class="table">
+    <thead>
+      <tr>
+         
+        <th >Student Name</th>
+        <th >City</th>
+        <th >Mobile</th>
+        <th>Action</th>
+        <th>Action2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentList">
+        <th>{{student.name}}</th>
+        <td>{{student.city}}</td>
+        <td>{{student.mobile}}</td> 
+        <td (click)="updateBtnClick(student)"> <i class="fa fa-pencil-square fa-lg"></i></td>
+        <td (click)="updateBtnClick(student)"> <i class="fa fa-trash-o fa-lg"></i></td>
+      </tr>
+      </tbody>
+      </table>
